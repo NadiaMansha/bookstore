@@ -1,0 +1,46 @@
+.release_container {
+  display: flex;
+  margin-top: 50px;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 1rem;
+
+  transition: all 0.3s ease-in-out;
+}
+.release {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1500px;
+  padding: 0 15px;
+  margin: 0 auto;
+  text-align: right;
+  margin-bottom: 50px;
+}
+.release h1 {
+  color: #393280;
+  text-align: center;
+  font-family: Inter;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: capitalize;
+}
+.release a {
+  text-decoration: none;
+  color: #ed553b;
+  margin-top: 20px;
+
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.32px;
+  text-transform: capitalize;
+}

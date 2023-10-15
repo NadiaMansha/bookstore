@@ -1,0 +1,58 @@
+.add_book{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 20rem;
+    margin-top: 50px;
+   
+}
+
+.add_book h1{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.add_book_image{
+    width: 400px;
+    height: 200px;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+.add_book select{
+    width: 30rem;
+    height: 3rem;
+    padding: 0.5rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+.add_book input{
+    width: 30rem;
+    height: 3rem;
+    padding: 0.5rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+.add_book button{
+    margin-top: 1rem;
+    width: 30rem;
+    height: 2.5rem;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    background-color:  #393280;
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    outline: none;
+    margin-bottom: 1.5rem;
+}
+.add_book button:hover{
+    background-color:#fff;
+    color: #393280;
+    border: 1px solid #393280;
+}

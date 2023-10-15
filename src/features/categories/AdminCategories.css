@@ -1,0 +1,81 @@
+.admin_categories{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  margin-left: 200px;
+    margin-top: 50px;
+}
+.add_category{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+.add_category h1{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.add_category input{
+    width: 30rem;
+    height: 3rem;
+    padding: 0.5rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+.add_category button{
+    margin-top: 1rem;
+    width: 30rem;
+    height: 2.5rem;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    background-color:  #393280;
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    outline: none;
+}
+.add_category button:hover{
+    background-color:#fff;
+    color: #393280;
+    border: 1px solid #393280;
+}
+
+.categories_list {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-top: 50px;
+}
+
+.categories_list ul{
+    margin-top: 20px;
+}
+.categories_list ul li{
+    list-style: none;
+  
+
+}
+.categories_list ul li p{
+    display: inline-block;
+    margin: 2px 20px;
+    font-size: 1.5rem;
+  
+
+}
+.categories_list ul li button{
+    margin-left: 20px;
+    width: 5rem;
+    height: 2rem;
+    border: none;
+    border-radius: 5px;
+    background-color:  #393280;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    outline: none;
+}

@@ -1,0 +1,48 @@
+.not_found{
+    display: flex;
+    flex-direction: column;
+  margin-top: 30px;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+ 
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #333;
+    text-align: center;
+    
+    letter-spacing: 1px;
+}
+.not_found h1{
+    font-size: 5rem;
+    font-weight: 700;
+    color: #393280;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 50px;
+}
+.not_found h2{
+    line-height: 1.5;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #333;
+margin-top: 20px;
+    letter-spacing: 1px;
+}
+.not_found button{
+    margin-top: 20px;
+   
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 10px 20px;
+  height: 50px;
+  width: 200px;
+  
+  cursor: pointer;
+}
+.not_found button:hover{
+    background-color: #393280;
+    color: #fff;
+}
