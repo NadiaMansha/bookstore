@@ -3,10 +3,15 @@ import { useSelector } from 'react-redux'
 import { cartSelector } from './cartSlice'
 import CartItem from '../../components/cart-item/CartItem'
 import './CartPage.css'
-import { Link } from 'react-router-dom'
+import { Link ,useNavigate} from 'react-router-dom'
+import { selectAuthUserToken } from '../auth/authSlice'
+import { Modal } from 'antd'
 
 const CartPage = () => {
+  const navigate = useNavigate()
   const cart = useSelector(cartSelector)
+  const token = useSelector(selectAuthUserToken)
+  const [isModalVisible, setIsModalVisible] = React.useState(false)
   const getTotal = () => {
     let totalQuantity = 0
     let totalPrice = 0
@@ -36,13 +41,36 @@ const CartPage = () => {
   Total ({getTotal().totalQuantity} items) 
   : <strong>${getTotal().totalPrice}</strong>
 </p>{
-  cart.length > 0 &&
-<button className='checkout-btn'>
+  cart.length > 0 && token ?
+<button 
+
+ className='checkout-btn'>
   <Link
   to='/payment'
   > Proceed to checkout</Link>
-</button>
+</button>:
+<button
+  className='checkout-btn'
+  onClick={() => setIsModalVisible(true)}
+  >
+    Proceed to checkout
+  </button>
+
 }
+
+<Modal
+title="Login"
+open={isModalVisible}
+onOk={() => {setIsModalVisible(false)
+  navigate('/login')}
+
+}
+onCancel={() => setIsModalVisible(false)}
+>
+  <p>You need to login to checkout</p>
+  
+  
+</Modal>
   </div>
   )
 }

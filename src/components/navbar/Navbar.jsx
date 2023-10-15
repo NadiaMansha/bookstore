@@ -15,10 +15,12 @@ import { cartSelector } from '../../features/cart/cartSlice'
 import { Link } from 'react-router-dom'
 import { selectAuthUserToken } from '../../features/auth/authSlice'
 import {AiOutlineLogout} from 'react-icons/ai'
+import { Button, Modal } from 'antd';
 
 export const Navbar = () => {
   const cart = useSelector(cartSelector)
   const token = useSelector(selectAuthUserToken)
+  const [isModalVisible, setIsModalVisible] = React.useState(false);
   
   const getTotalQuantity = () => {
     let total = 0
@@ -58,11 +60,13 @@ export const Navbar = () => {
               <li>
                 {
                   token ? 
-                  <Link to='/logout'>
+                  <Button 
+                  onClick={() => setIsModalVisible(true)}
+                  >
                     <AiOutlineLogout/>
                     &nbsp;
                     LOGOUT
-                  </Link> : <Link to='/login'>
+                  </Button> : <Link to='/login'>
                   <img src={account} alt="account" />
                 &nbsp;
                     LOGIN</Link>
@@ -92,11 +96,8 @@ export const Navbar = () => {
                
                
                 </li>
-                <div className='vertical'></div>
-              <li>
-                <img src={wishlist} alt="wishlist" />
-                &nbsp;
-                WISHLIST</li>
+               
+            
             </ul>
           </div>
           
@@ -107,11 +108,11 @@ export const Navbar = () => {
        
         <ul className="nav-links">
           <li>
-            <a href="/">Home</a>
+            <Link to="/">Home</Link>
           </li>
           <div className='vertical'></div>
           <li>
-            <a href="about">About Us</a>
+            <Link to="about">About Us</Link>
           </li>
           <div className='vertical'></div>
           <li>
@@ -121,15 +122,32 @@ export const Navbar = () => {
           <li>
             <a href="#new-release">New Release</a>
           </li>
-          <div className='vertical'></div>
+         
          
           <div className='vertical'></div>
           <li>
-          <Link to="/contact">Contact</Link>
+          <Link to="contact">Contact</Link>
           </li>
         </ul>
       </div>
-  
+      <Modal 
+    title="Logout"
+     open={isModalVisible}
+    onOk={() => {
+      setIsModalVisible(false)
+      localStorage.removeItem('userToken')
+      localStorage.removeItem('userInfo')
+      window.location.reload()
+    }}
+    onCancel={() => {
+      setIsModalVisible(false)
+    }}
+ 
+  >
+    <p>Are you sure you want to logout?</p>
+  </Modal>
    </div>
+  
+
   )
 }

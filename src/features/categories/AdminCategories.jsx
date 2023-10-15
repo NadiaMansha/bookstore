@@ -50,18 +50,27 @@ const AdminCategories = () => {
 
         <div className="categories_list">
             <h1>Categories List</h1>
-            <ul>
-                {
-                    status === 'succeeded' &&
-                    categories?.map(category => 
-                        <li key={category?._id}>
-                            <p>{category?.name}</p>
-                            <p>{category?.description}</p>
-                            <button>Delete</button>
-                        </li>
-                        )
-                }
-            </ul>
+           <table>
+                <thead>
+                     <tr>
+                          <th>name</th>
+                          <th>description</th>
+                          <th>Actions</th>
+                     </tr>
+                </thead>
+                <tbody>
+                     {categories?.map((category) => (
+                          <tr key={category._id}>
+                            <td>{category.name}</td>
+                            <td>{category.description}</td>
+                            <td>
+                                <button>Delete</button>
+                                <button>Edit</button> 
+                            </td>
+                          </tr>
+                     ))}
+                </tbody>
+           </table>
             </div>
     </div>
   );

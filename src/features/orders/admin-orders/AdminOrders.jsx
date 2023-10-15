@@ -7,37 +7,40 @@ const AdminOrders = () => {
   const dispatch = useDispatch()
   const orders = useSelector(selectAllOrders)
   React.useEffect(() => {
+
+    if (orders.length === 0){
     dispatch(fetchOrders())
+    }
   }, [dispatch])
 console.log(orders)
   return (
     <div className="admin_orders">
       <h1>orders</h1>
-       {
-          orders?.map(order => (
-            <div key={order._id} className="admin_orders__order">
-              <div className="admin_orders__order__id">
-                <p>{order._id}</p>
-              </div>
-              <div className="admin_orders__order__user">
-                <p>{order.name}</p>
-              </div>
-              <div className="admin_orders__order__date">
-                <p>{order?.createdAt?.substring(0, 10)}</p>
-              </div>
-              
-              <div className="admin_orders__order__paid">
-                <p>{order.payment ? order.payment?.amount/100:""}</p>
-              </div>
-              <div className="admin_orders__order__delivered">
-                <p>{order.status ? order.status.substring(0, 10) : 'No'}</p>
-              </div>
-              <div className="admin_orders__order__details">
-                <button>Details</button>
-              </div>
-            </div>
-          ))
-        }
+      
+      <table>
+        <thead>
+          <tr>
+            <th>name</th>
+            <th>email</th>
+            <th>address</th>
+            <th>total</th>
+            <th>cartItems</th>
+            <th>status</th>
+          </tr>
+        </thead>
+        <tbody>
+          {orders?.map((order) => (
+            <tr key={order._id}>
+              <td>{order.name}</td>
+              <td>{order.email}</td>
+              <td>{order.address}</td>
+              <td>{order?.payment?.amount/100}$</td>
+              <td>{order?.books.length}</td>
+              <td>{order?.status}</td>
+            </tr>
+          ))}
+        </tbody>
+        </table>
     </div>
   )
 }

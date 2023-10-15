@@ -12,7 +12,8 @@ const Login = () => {
   const success = useSelector(selectAuthSuccess)
   const error = useSelector(selectAuthError)
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault()
 
     dispatch(loginUser(formData))
     if (success) {

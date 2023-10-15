@@ -15,7 +15,7 @@ export const fetchOrders = createAsyncThunk(
 
             );
         const data = await response.json();
-        return data;
+        return data.data;
     }
 );
 const initialState = {
