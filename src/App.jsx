@@ -22,6 +22,7 @@ import UserOrders from "./features/orders/user-orders/UserOrders";
 import Payment from "./pages/payment/Payment";
 import About from "./pages/about/About";
 import Contact from "./pages/contact/Contact";
+import Search from "./features/search/Search";
 
 function App() {
   const router = createBrowserRouter(
@@ -31,18 +32,21 @@ function App() {
         <Route path="books" element={<Books />} errorElement={<NotFound />} />
         <Route path="books/:id" element={<BookDetails />} />
         <Route path="cart" element={<CartPage />} />
+        <Route path="search" element={<Search />} />
         <Route path="about" element={<About />} />
         <Route path="contact" element={<Contact />} />
         <Route path="login" element={<Login />} />
         <Route path="signup" element={<Signup />} />
         <Route path="payment" element={<Payment />} />
         <Route path="dashboard" element={<Dashboard />}>
+     
           <Route index element={<Profile />} />
           <Route path="books" element={<Books />} />
           <Route path="categories" element={<AdminCategories />} />
           <Route path="add-book" element={<AddBook />} />
           <Route path="admin-orders" element={<AdminOrders />} />
           <Route path="user-orders" element={<UserOrders />} />
+        
         </Route>
         <Route path="*" element={<NotFound />} />
       </Route>,

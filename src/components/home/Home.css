@@ -1,48 +1,91 @@
-.home{
+.home {
   display: flex;
-    flex-direction: column;
-   
+  flex-direction: column;
 }
-.main{
-    margin-top: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: linear-gradient(79deg, #FFE5E5 -2.75%, #F5FFFE 20.07%, #FFF 54.28%, #FFF 101.59%);
+.main {
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(
+    79deg,
+    #ffe5e5 -2.75%,
+    #f5fffe 20.07%,
+    #fff 54.28%,
+    #fff 101.59%
+  );
 }
-.heading{
-    padding: 20px;
-    margin-left: 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 600px;
-  
+.heading {
+  padding: 20px;
+  margin-left: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 600px;
 }
-.heading h1{
-    color: #393280;
-font-family: Inter;
-font-size: 60px;
-font-style: normal;
-font-weight: 600;
-line-height: 87px;
-letter-spacing: -1.2px;
-text-transform: capitalize;
+.heading h1 {
+  color: #393280;
+  font-family: Inter;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 87px;
+  letter-spacing: -1.2px;
+  text-transform: capitalize;
 }
-.heading p{
-    padding: 30px 20px;
-    color: rgba(57, 50, 128, 0.80);
-font-family: Inter;
-font-size: 22px;
-font-style: normal;
-font-weight: 500;
-line-height: 39.6px;
-letter-spacing: 0.88px;
+.heading p {
+  padding: 30px 20px;
+  color: rgba(57, 50, 128, 0.8);
+  font-family: Inter;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 39.6px;
+  letter-spacing: 0.88px;
+}
+.home-image img {
+  width: 650px;
+  height: 550px;
+  object-fit: cover;
 }
 
-.home-image img{
-  
-    width: 650px;
-    height: 550px;
-    object-fit: cover;
+/*Responsive */
+@media screen and (max-width: 1024px) {
+  .home-image img {
+    width: 500px;
+    height: 400px;
+  }
+  .heading h1 {
+    font-size: 50px;
+  }
+  .heading p {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .home-image img {
+    width: 350px;
+    height: 300px;
+  }
+  .heading h1 {
+    font-size: 30px;
+  }
+  .heading p {
+    font-size: 15px;
+    line-height: 20px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .main {
+    flex-direction: column;
+  }
+  .heading {
+    margin-left: 0;
+    width: 300px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .home-image img {
+    width: 300px;
+  }
 }

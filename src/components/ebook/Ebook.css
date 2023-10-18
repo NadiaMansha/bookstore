@@ -7,6 +7,7 @@
   padding: 0 15px;
   margin: 0 auto;
   margin-bottom: 50px;
+  margin-top: 20px;
 }
 .ebook_container1 {
   background: linear-gradient(94deg, #fcecec 1.85%, #f6fffe 64.13%);
@@ -14,7 +15,7 @@
   flex-direction: column;
   justify-content: start;
   align-items: start;
-  width: 50%;
+/*  width: 600px; */
   height: 300px;
   padding: 15px;
 }
@@ -75,3 +76,60 @@
   height: 300px;
   object-fit: cover;
 }
+
+/*Responsive*/
+@media screen and (max-width: 1024px) {
+
+  .ebook_container1 h1 {
+    font-size: 25px;
+  }
+  .ebook_container1 h5 {
+    font-size: 15px;
+  }
+  .ebook_container1 p {
+    font-size: 15px;
+  }
+  .input_container input {
+    width: 300px;
+  }
+  .ebook_container2 img {
+    width: 300px;
+ 
+  }
+}
+@media screen and (max-width: 768px) {
+
+  .ebook_container1 h1 {
+    font-size: 22px;
+    line-height: 40px; /* 166.667% */
+   
+  }
+ 
+  .ebbokcontainer1 p {
+   
+    font-size: 15px;
+   
+    line-height: 20px; /* 177.778% */
+  }
+  
+  .input_container input {
+ 
+  
+    width: 300px;
+    height: 40px;
+   
+    
+  }
+  .input_container button {
+
+    width: 50px;
+    height: 40px;
+   
+  }
+  .ebook_container2 img {
+    width: 300px;
+   
+  }
+}
+  
+

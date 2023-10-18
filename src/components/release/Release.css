@@ -1,12 +1,10 @@
 .release_container {
   display: flex;
   margin-top: 50px;
-
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-
   padding: 0 1rem;
-
   transition: all 0.3s ease-in-out;
 }
 .release {

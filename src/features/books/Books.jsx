@@ -3,15 +3,10 @@ import React from 'react'
 import './Books.css'
 import { useEffect } from 'react'
 import { useSelector ,useDispatch} from 'react-redux'
-
 import { selectBooks ,selectStatus,selectError,fetchBooks} from './bookslice'
 import { selectCategories,selectCategoryStatus,selectCategoryError ,fetchCategories} from '../categories/categoriesSlice'
-
 import Book from '../../components/book/Book'
 import { useSearchParams} from 'react-router-dom'
-
-
-
 
 
 const Books = () => {

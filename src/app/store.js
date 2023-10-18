@@ -5,6 +5,7 @@ import categoriesSlice from '../features/categories/categoriesSlice'
 import authSlice from '../features/auth/authSlice'
 import bookDetailsSlice from '../features/book-details/bookDetailsSlice'
 import ordersSlice from '../features/orders/ordersSlice'
+import searchslice from '../features/search/searchslice'
 
 const  store = configureStore({
   reducer: {
@@ -14,6 +15,7 @@ const  store = configureStore({
     'auth': authSlice,
     'bookDetails': bookDetailsSlice,
     'orders': ordersSlice,
+    'search': searchslice,
   },
 })
 export default store

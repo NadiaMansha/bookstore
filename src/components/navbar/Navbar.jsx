@@ -8,7 +8,6 @@ import{FiPhoneCall} from 'react-icons/fi'
 import {FiSearch} from 'react-icons/fi'
 import account from '../../assets/account.png'
 import cartImg from '../../assets/cart.png'
-import wishlist from '../../assets/wishlist.png'
 import logo from '../../assets/logo.png'
 import { useSelector } from 'react-redux'
 import { cartSelector } from '../../features/cart/cartSlice'
@@ -16,12 +15,21 @@ import { Link } from 'react-router-dom'
 import { selectAuthUserToken } from '../../features/auth/authSlice'
 import {AiOutlineLogout} from 'react-icons/ai'
 import { Button, Modal } from 'antd';
+import { useSearchParams } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
+import { GiHamburgerMenu } from "react-icons/gi";
+import { AiFillCloseCircle } from "react-icons/ai";
+
+
 
 export const Navbar = () => {
   const cart = useSelector(cartSelector)
   const token = useSelector(selectAuthUserToken)
   const [isModalVisible, setIsModalVisible] = React.useState(false);
-  
+  const [searchParams, setSearchParams] = useSearchParams()
+  const [search, setSearch] = React.useState('')
+  const navigate = useNavigate()
+  const [showLinks, setShowLinks] = React.useState(false);
   const getTotalQuantity = () => {
     let total = 0
     cart?.forEach(item => {
@@ -43,7 +51,6 @@ export const Navbar = () => {
           <BiLogoFacebookCircle  className='icon'/>
           <BiLogoInstagramAlt  className='icon'/>
           <BiLogoLinkedin  className='icon'/>
-        
           <BiLogoTwitter className='icon' />
         </div>
       </div>
@@ -52,9 +59,57 @@ export const Navbar = () => {
           <img src={logo} alt="logo" />
           </div>
         <div className="search">
-          <input type="text" placeholder="Search" />
-           <FiSearch  className='search-icon'/>
+          <input  
+          name='search'
+          value={search}
+          onChange={e => setSearch(e.target.value)}
+          type="text" placeholder="Search" />
+           <FiSearch  
+            onClick={() =>{
+              setSearchParams({ search })
+              navigate(`/search?search=${search}`)
+          }}
+            className='search-icon'/>
+              <div className="mobile_nav">
+        {
+            showLinks==false?
+            <GiHamburgerMenu 
+            className='menu-icon'
+             onClick={()=>setShowLinks(true)} />
+            :
+            <div className="navbar__links">
+                  <AiFillCloseCircle 
+                  className="navbar__hamburger__icon_close"
+                  onClick={()=>setShowLinks(false)} />
+                 <ul className="nav-links">
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+       
+          <li>
+            <Link to="about">About Us</Link>
+          </li>
+           
+          <li>
+            <a href="#new-release">New Release</a>
+          </li>
+          <li>
+          <Link  to="books">Books</Link>
+          </li>
+          <li>
+          <Link to="contact">Contact</Link>
+          </li>
+          <li>
+          <Link to="cart">cart</Link>
+          </li>
+         
+        </ul>
+            </div>
+        }
+   </div>
+             
           </div>
+        
           <div className="mid_nav-list">
             <ul>
               <li>
@@ -79,30 +134,22 @@ export const Navbar = () => {
                   <img src={account} alt="account" />
                 &nbsp;
                 ACCOUNT</Link>
-               
-                </li>:""
-                
+                  </li>:""  
               }
               <div className='vertical'></div>
               <li>
               <span className='cart-count'>{getTotalQuantity() || 0} </span>
-               
-               <Link to="/cart">
-               <img   
-                
-                src={cartImg} alt="cart" />
+                    <Link to="/cart">
+               <img  src={cartImg} alt="cart" />
                 &nbsp;
                 CART</Link>
-               
-               
                 </li>
-               
-            
             </ul>
           </div>
           
+          
         </div>
-        <div className='line'></div>
+{/*        <div className='line'></div>  */}
 
       <div className="bottom-nav">
        
@@ -146,6 +193,9 @@ export const Navbar = () => {
   >
     <p>Are you sure you want to logout?</p>
   </Modal>
+
+
+
    </div>
   
 

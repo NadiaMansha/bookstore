@@ -6,7 +6,7 @@ const UserMenu = () => {
     <div className="user_menu">
         <ul>
             <li>
-                <Link to="profile"> 
+                <Link to="."> 
                 Profile
                 </Link>
             </li>

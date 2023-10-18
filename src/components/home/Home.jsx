@@ -5,11 +5,12 @@ import { Categories } from '../categories/Categories'
 import { Ebook } from '../ebook/Ebook'
 import Featured from '../featured/Featured'
 import Release from '../release/Release'
+import Footer from '../footer/Footer'
 
 const Home = () => {
   return (
     <div className="home">
-      <div className="main">
+       <div className="main">
     <div className="heading">
         <h1>ipsum dolor si</h1>
         <p>
@@ -20,11 +21,11 @@ const Home = () => {
     <div className="home-image">
         <img src={books} alt="books" />
     </div>
-    </div>
-    <Categories />
-    <Ebook />
+    </div> 
+  <Categories />
     <Release />
-    <Featured />
+    <Featured /> 
+  
     </div>
   )
 }
