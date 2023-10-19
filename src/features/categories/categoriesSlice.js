@@ -1,7 +1,7 @@
 import { createSlice ,createAsyncThunk} from "@reduxjs/toolkit";
 
  const token= JSON.parse(localStorage.getItem('userToken')) || null
-const baseUrl='http://localhost:3000'
+const baseUrl='http://51.20.62.104:5000'
 const initialState = {
     categories: [],
     status: 'idle',

@@ -10,13 +10,14 @@ const AddBook = () => {
   const dispatch = useDispatch()
   const status = useSelector(selectStatus)
   const error = useSelector(selectError)
+  
   const [book, setBook] = useState({
     
     title: '',
     description: '',
     price: '',
     author:'',
-    categoryId: categories[0]._id
+    categoryId: categories[0]?._id
     
   })
   const handleAddBook = () => {
