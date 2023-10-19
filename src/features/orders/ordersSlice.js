@@ -1,6 +1,6 @@
 import { createSlice,createAsyncThunk } from "@reduxjs/toolkit";
 
-const url="http://localhost:3000/orders";
+const url="http://51.20.62.104:5000/orders";
 const token = JSON.parse(localStorage.getItem("userToken")) || null;
 
 //get orders
