@@ -19,3 +19,43 @@
    
   padding: 10px;
   }
+.orders_mobile{
+  display: none;
+}
+
+  /*Responsive*/
+  @media screen and (max-width: 768px) {
+    .admin_orders table{
+      border-collapse: collapse;
+      margin-bottom: 5px;
+     margin-left: 5px;
+    }
+    
+    .admin_orders th,
+    .admin_orders td {
+      border: 1px solid #ccc; 
+      padding: 10px 5px;
+      text-align: left;
+      font-size: 15px;
+      
+      
+    }
+    .admin_orders tr{
+     
+    padding: 5px;
+    }
+  }
+  @media screen and (max-width: 425px) {
+   .orders_table{
+     display: none;
+   }
+    .orders_mobile{
+      display: block;
+    }
+     .orders_mobile h3{
+      text-align: center;
+      
+
+     }
+  }
+ 

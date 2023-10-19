@@ -132,6 +132,12 @@
 @media screen and (max-width: 1024px) {
 }
 @media screen and (max-width: 768px) {
+  .mid-nav{
+    justify-content: start;
+  }
+  .search {
+    margin-right: 300px;
+  }
   .search input {
     width: 300px;
     margin-left: 10px;

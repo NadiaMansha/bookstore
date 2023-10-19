@@ -114,14 +114,13 @@ export const Navbar = () => {
             <ul>
               <li>
                 {
-                  token ? 
-                  <Button 
+                  token ?
+                  <AiOutlineLogout 
                   onClick={() => setIsModalVisible(true)}
-                  >
-                    <AiOutlineLogout/>
-                    &nbsp;
-                    LOGOUT
-                  </Button> : <Link to='/login'>
+                  />
+                   
+                  
+                 : <Link to='/login'>
                   <img src={account} alt="account" />
                 &nbsp;
                     LOGIN</Link>
