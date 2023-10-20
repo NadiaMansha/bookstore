@@ -1,36 +1,57 @@
 import React from 'react'
 import './AdminMenu.css'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 const AdminMenu = () => {
   return (
    <div className="admin_menu">
     <ul>
       <li>
-        <Link to=".">
+        <NavLink 
+        end
+        className={({ isActive }) =>
+        isActive ? "active-link" : ""
+        }
+         to=".">
         Profile
-        </Link>
+        </NavLink>
       </li>
 <li>
-<Link to="books">
+<NavLink 
+ className={({ isActive }) =>
+ isActive ? "active-link" : ""
+ }
+ to="books">
 Books
-</Link>
+</NavLink>
 </li>
 <li>
-<Link to="add-book">
+<NavLink 
+ className={({ isActive }) =>
+ isActive ? "active-link" : ""
+ }
+ to="add-book">
 Add Book
-</Link>
+</NavLink>
 </li>
 <li>
-<Link to="categories">
+<NavLink 
+ className={({ isActive }) =>
+ isActive ? "active-link" : ""
+ }
+ to="categories">
 Categories
-</Link>
+</NavLink>
 </li>
 
 <li>
-<Link to="admin-orders">
+<NavLink 
+ className={({ isActive }) =>
+ isActive ? "active-link" : ""
+ }
+ to="admin-orders">
 Orders
-</Link>
+</NavLink>
 </li>
 
     </ul>

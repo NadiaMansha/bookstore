@@ -73,13 +73,23 @@ const Books = () => {
         <div className="books_container">
           
             {
-              status === 'loading' && <div>Loading...</div>
+              status === 'loading' && <div 
+              className='loading'
+              >Loading...</div>
             }
             {
-              status === 'failed' && <div>{error}</div>
+              status === 'failed' && <div 
+              className='error'
+              >{error}</div>
             }
             {
-              status === 'succeeded' &&
+               status === 'succeeded' && books.length===0 && <div
+                className='no_books'
+                >No books available</div>
+
+            }
+            {
+              status === 'succeeded' && books.length > 0 &&
                
             
               filterBooks(category)?.map((book) => 

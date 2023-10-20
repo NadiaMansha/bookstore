@@ -1,4 +1,5 @@
 .about{
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -25,4 +26,17 @@
     line-height:32px;
     letter-spacing: 2.08px;
 
+}
+/*Responsive*/
+@media (max-width: 768px) {
+    .about{
+        margin-top: 0;
+        height: 100%;
+    }
+    .about h1{
+        font-size: 30px;
+    }
+    .about h5{
+        font-size: 12px;
+    }
 }

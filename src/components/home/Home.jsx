@@ -1,11 +1,10 @@
 import React from 'react'
 import './Home.css'
-import books from '../../assets/books.png'
+import books from '../../assets/book9.png'
 import { Categories } from '../categories/Categories'
-import { Ebook } from '../ebook/Ebook'
 import Featured from '../featured/Featured'
 import Release from '../release/Release'
-import Footer from '../footer/Footer'
+
 
 const Home = () => {
   return (

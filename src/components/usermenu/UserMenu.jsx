@@ -1,19 +1,27 @@
 import React from 'react'
 import './UserMenu.css'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 const UserMenu = () => {
   return (
     <div className="user_menu">
         <ul>
             <li>
-                <Link to="."> 
+                <NavLink 
+                end
+                className={({ isActive }) =>
+               isActive ? "active-link" : ""
+              }
+                to="."> 
                 Profile
-                </Link>
+                </NavLink>
             </li>
             <li>
-                <Link to='user-orders'> 
+                <NavLink 
+                className={({ isActive}) =>
+                 isActive ? "active-link" : ""}
+                to='user-orders'> 
                 Orders
-                </Link>
+                </NavLink>
             </li>
 
         </ul>

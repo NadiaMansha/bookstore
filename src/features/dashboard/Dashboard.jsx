@@ -11,6 +11,7 @@ const Dashboard = () => {
 
   return (
     <div className="dashboard">
+       
       {
         user.role==='admin' ?
         <AdminMenu /> :

@@ -1,32 +1,28 @@
 .admin_menu{
-    background-color: #393280;
-     width: 200px;
-      height: 100vh;
-  
-  }
-  
-  .admin_menu ul{
-   
+    margin-top: 20px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.admin_menu ul{
     display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-  }
-  .admin_menu ul li{
-      list-style: none;
-          margin: 20px 0;
-  }
-  .admin_menu ul li a{
-      text-decoration: none;
-      color: white;
-      font-size: 20px;
-      font-weight: 500;
-      transition: all 0.3s ease;
-  }
-  .admin_menu ul li a:hover{
-      color: #b5aff5;
-      font-size: 22px;
-      font-weight: 600;
-  }
-  
-  
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.admin_menu ul li{
+    margin: 20px 10px;
+}
+.admin_menu ul li a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    color: #011627;
+}
+a.active-link {
+    color:#393280 !important;
+    border-bottom: 3px solid #393280;
+    padding-bottom: 5px;
+}
