@@ -46,7 +46,5 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 20px;
-    background: linear-gradient(75deg, #fbeeee 11.08%, #f7fffe 89.87%);
     height: 100vh;
 }

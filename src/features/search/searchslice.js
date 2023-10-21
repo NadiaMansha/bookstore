@@ -1,6 +1,6 @@
 import { createSlice,createAsyncThunk } from "@reduxjs/toolkit";
 
-const url="http://localhost:3000/books/search";
+const url="https://90wb7h7uk0.execute-api.us-east-1.amazonaws.com/dev/books/search";
 export const fetchSearch = createAsyncThunk(
     "search/fetchSearch",
     async (searchTerm) => {

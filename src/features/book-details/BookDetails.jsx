@@ -31,7 +31,7 @@ const BookDetails = () => {
     </Link>
     </div>
    <div className="details_container">
-        <img src={`http://localhost:3000/images/${book?.image}`} alt="book" />
+        <img src={book?.image} alt="book" />
         </div>
         <div className="details_container2">
           

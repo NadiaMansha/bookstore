@@ -1,6 +1,6 @@
 import { createSlice ,createAsyncThunk} from "@reduxjs/toolkit";
 
-const baseUrl = 'http://51.20.62.104:5000/users'
+const baseUrl = 'https://90wb7h7uk0.execute-api.us-east-1.amazonaws.com/dev/users'
 
 const userInfo=(localStorage.getItem('userInfo'))!==undefined ? JSON.parse(localStorage.getItem('userInfo')): null
 const userToken=(localStorage.getItem('userToken'))!==undefined ? JSON.parse(localStorage.getItem('userToken')): null

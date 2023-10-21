@@ -1,6 +1,6 @@
 import { createSlice,createAsyncThunk } from "@reduxjs/toolkit";
 
-const url="http://51.20.62.104:5000/orders";
+const url="https://90wb7h7uk0.execute-api.us-east-1.amazonaws.com/dev/orders";
 const token = JSON.parse(localStorage.getItem("userToken")) || null;
 
 //get orders

@@ -3,7 +3,7 @@ import { createSlice,createAsyncThunk } from "@reduxjs/toolkit";
 
 
 const token= JSON.parse(localStorage.getItem('userToken')) || null
-const baseUrl='http://51.20.62.104:5000'
+const baseUrl='https://90wb7h7uk0.execute-api.us-east-1.amazonaws.com/dev/'
 //get a book by id
 export const fetchBookById = createAsyncThunk('books/fetchBookById', async (id) => {
     const response = await fetch(`${baseUrl}/books/${id}`)

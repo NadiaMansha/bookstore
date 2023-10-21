@@ -11,7 +11,7 @@ const Home = () => {
     <div className="home">
        <div className="main">
     <div className="heading">
-        <h1>ipsum dolor si</h1>
+        <h1>Bookstore</h1>
         <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu feugiat amet, <br />
          libero ipsum enim pharetra hac. Urna commodo, lacus ut magna velit eleifend. Amet, quis urna, a eu.

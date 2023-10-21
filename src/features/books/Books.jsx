@@ -96,7 +96,7 @@ const Books = () => {
                 <Book 
                 key={book._id}
                 searchParams={searchParams}
-                id={book._id} image={`http://localhost:3000/images/${book.image}`} title={book.title} author={book.author} price={book.price}/>
+                id={book._id} image={book.image} title={book.title} author={book.author} price={book.price}/>
               )
 }
 
