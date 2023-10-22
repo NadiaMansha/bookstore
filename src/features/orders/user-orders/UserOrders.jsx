@@ -47,12 +47,12 @@ const UserOrders = () => {
       <div className="orders_mobile">
         {orders?.map((order) => (
           <div className="order_mobile" key={order._id}>
-            <h3>{order?.name}</h3>
-            <p>{order?.email}</p>
-            <p>{order?.address}</p>
-            <p>{order?.payment?.amount/100}$</p>
-            <p>{order?.books.length}</p>
-            <p>{order?.status}</p>
+            <h3>Name:{order?.name}</h3>
+            <p>Email:{order?.email}</p>
+            <p>Address:{order?.address}</p>
+            <p>Total:{order?.payment?.amount/100}$</p>
+            <p>Items:{order?.books.length}</p>
+            <p>Status:{order?.status}</p>
           </div>
         ))}
         </div>

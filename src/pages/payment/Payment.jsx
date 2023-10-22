@@ -7,11 +7,6 @@ import { Elements } from "@stripe/react-stripe-js";
 import { useEffect, useState } from "react";
 import CardForm from "./CheckOutForm";
 
-// Make sure to call loadStripe outside of a component’s render to avoid
-// recreating the Stripe object on every render.
-// This is a public sample test API key.
-// Don’t submit any personally identifiable information in requests made with this key.
-// Sign in to see your own test API key embedded in code samples.
 const stripePromise = loadStripe(
   "pk_test_51MxbuQL0OmplM2VE8Hb24JbnhlKDNX52d2cM9K57DmbraQOoa1t1z0yHLiF6pXkRvjjZfzNuLj6dpOh7T1MbYE0d00UaUK81fw"
 );

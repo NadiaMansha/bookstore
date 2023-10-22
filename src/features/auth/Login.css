@@ -57,3 +57,74 @@
     text-decoration: none;
 }
 
+/*Responsive*/
+@media screen and (max-width: 1024px) {
+  .login {
+    width: 350px;
+   
+    margin-left: 400px;
+  }
+  .login h1 {
+    font-size: 1.5rem;
+  }
+  .login input {
+    width: 15rem;
+  }
+  .login button {
+    width: 15rem;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .login {
+    width: 300px;
+    height: 500px;
+    margin-left: 200px;
+  }
+  .login h1 {
+    font-size: 1.5rem;
+  }
+  .login input {
+    width: 15rem;
+  }
+  .login button {
+    width: 15rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .login {
+    width: 300px;
+   
+    margin-left: 50px;
+  }
+  .login h1 {
+    font-size: 1.5rem;
+  }
+  .login input {
+    width: 15rem;
+  }
+  .login button {
+    width: 15rem;
+  }
+  
+}
+@media screen and (max-width: 320px) {
+  .login {
+    width: 250px;
+
+    margin-left: 20px;
+  }
+  .login h1 {
+    font-size: 1.5rem;
+  }
+  .login input {
+    width: 12rem;
+  }
+  .login button {
+    width: 12rem;
+  }
+  
+  
+}
+
