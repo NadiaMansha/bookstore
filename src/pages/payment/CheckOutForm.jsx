@@ -46,7 +46,7 @@ const CardForm = ({
 
   const sendTokenToServer = async (token) =>{
     // Send the token to your server using a fetch or Axios.
-    const response=await fetch("http://localhost:3000/books/payment", {
+    const response=await fetch("https://90wb7h7uk0.execute-api.us-east-1.amazonaws.com/dev/books/payment", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

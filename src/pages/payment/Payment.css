@@ -79,4 +79,28 @@
     filter: contrast(115%);
   }
   
-  
+  /*Responsive*/
+  @media screen and (max-width: 768px) {
+    .payment {
+      margin-top: 50px;
+    }
+    .payment input {
+      width: 20rem;
+    }
+    form {
+      width: 50vw;
+      min-width: 300px;
+    }
+  }
+  @media screen and (max-width: 425px) {
+    .payment {
+      margin-top: 50px;
+    }
+    .payment input {
+      width: 15rem;
+    }
+    form {
+      width: 80vw;
+      min-width: 300px;
+    }
+  }

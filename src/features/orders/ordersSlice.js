@@ -91,4 +91,8 @@ const ordersSlice = createSlice({
 
 export const { orderAdded, orderUpdated } = ordersSlice.actions;
 export const selectAllOrders = (state) => state.orders.orders;
+export const selectOrderById = (state, orderId) =>
+    state.orders.orders.find((order) => order.id === orderId);
+ export const selectStatus = (state) => state.orders.status;
+ export const selectError = (state) => state.orders.error;   
 export default ordersSlice.reducer;

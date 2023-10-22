@@ -1,61 +1,50 @@
+.admin_orders table {
+  border-collapse: collapse;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
 
-
-.admin_orders table{
-    border-collapse: collapse;
-    margin-bottom: 10px;
-   margin-left: 10px;
-  }
-  
-  .admin_orders th,
-  .admin_orders td {
-    border: 1px solid #ccc; 
-    padding: 20px 10px;
-    text-align: left;
-    font-size: 20px;
-    
-    
-  }
-  .admin_orders tr{
-   
+.admin_orders th,
+.admin_orders td {
+  border: 1px solid #ccc;
+  padding: 20px 10px;
+  text-align: left;
+  font-size: 20px;
+}
+.admin_orders tr {
   padding: 10px;
-  }
-.orders_mobile{
+}
+.orders_mobile {
   display: none;
 }
 
-  /*Responsive*/
-  @media screen and (max-width: 768px) {
-    .admin_orders table{
-      border-collapse: collapse;
-      margin-bottom: 5px;
-     margin-left: 5px;
-    }
-    
-    .admin_orders th,
-    .admin_orders td {
-      border: 1px solid #ccc; 
-      padding: 10px 5px;
-      text-align: left;
-      font-size: 15px;
-      
-      
-    }
-    .admin_orders tr{
-     
-    padding: 5px;
-    }
+/*Responsive*/
+@media screen and (max-width: 768px) {
+  .admin_orders table {
+    border-collapse: collapse;
+    margin-bottom: 5px;
+    margin-left: 5px;
   }
-  @media screen and (max-width: 425px) {
-   .orders_table{
-     display: none;
-   }
-    .orders_mobile{
-      display: block;
-    }
-     .orders_mobile h3{
-      text-align: center;
-      
 
-     }
+  .admin_orders th,
+  .admin_orders td {
+    border: 1px solid #ccc;
+    padding: 10px 5px;
+    text-align: left;
+    font-size: 15px;
   }
- 
+  .admin_orders tr {
+    padding: 5px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .orders_table {
+    display: none;
+  }
+  .orders_mobile {
+    display: block;
+  }
+  .orders_mobile h3 {
+    text-align: center;
+  }
+}

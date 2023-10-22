@@ -1,20 +1,23 @@
 import React from 'react'
 import { useSelector,useDispatch } from 'react-redux'
-import { selectAllOrders,fetchUserOrders } from '../ordersSlice'
+import { selectAllOrders,fetchUserOrders ,selectError,selectStatus} from '../ordersSlice'
 import './UserOrders.css'
 
 const UserOrders = () => {
   const dispatch = useDispatch()
   const orders = useSelector(selectAllOrders)
+  const error = useSelector(selectError)
+  const status = useSelector(selectStatus)
+
   React.useEffect(() => {
 
-    if (orders.length === 0){
+    if (status === 'idle'){
     dispatch(fetchUserOrders())
     }
   }, [dispatch])
 
   return (
-    <div className="admin_orders">
+    <div className="user_orders">
     <h1>orders</h1>
     
     <table>
