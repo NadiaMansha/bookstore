@@ -111,11 +111,22 @@ const Navbar = () => {
           <div className="mobile_nav">
         {
             showLinks==false?
-            <GiHamburgerMenu 
+            <div 
+            style={{display:'flex', alignItems:'center'}}>
+            
+                <span className='cart-count'>{getTotalQuantity() || 0} </span>
+                    <Link to="/cart">
+               <img  src={cartImg} alt="cart" />
+                </Link>
+              <GiHamburgerMenu 
             className='menu-icon'
              onClick={()=>setShowLinks(true)} />
+            </div>
+            
             :
+            
             <div className="navbar__links">
+                
                   <AiFillCloseCircle 
                   className="navbar__hamburger__icon_close"
                   onClick={()=>setShowLinks(false)} />
@@ -137,9 +148,7 @@ const Navbar = () => {
           <li>
           <Link to="contact">Contact</Link>
           </li>
-          <li>
-          <Link to="cart">cart</Link>
-          </li>
+         
          
         </ul>
             </div>

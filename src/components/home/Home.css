@@ -63,6 +63,9 @@
   }
 }
 @media screen and (max-width: 768px) {
+  .main {
+    margin-top: 50px;
+  }
   .home-image img {
     width: 350px;
     height: 300px;
@@ -78,6 +81,7 @@
 @media screen and (max-width: 480px) {
   .main {
     flex-direction: column;
+    margin-top: 20px;
   }
   .heading {
     margin-left: 0;

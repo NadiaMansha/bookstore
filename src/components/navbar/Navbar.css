@@ -146,9 +146,13 @@
     display: block;
   }
   
+    .search{
+    margin-left: 20px;
+  }
 
   .menu-icon{
     color:#393280;
+    margin-left: 10px;
  
   }
  
