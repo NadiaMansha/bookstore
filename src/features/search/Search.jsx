@@ -25,14 +25,26 @@ const Search = () => {
   return (
     <div className="search">
    
-      {status === "loading" && <p>Loading...</p>}
-      {status === "succeeded" && searchResult?.length === 0 && (
-        <p>No books found</p>
-      )}
+   {
+              status === 'loading' && <div 
+              className='loading'
+              >Loading...</div>
+            }
+            {
+              status === 'failed' && <div 
+              className='error'
+              >{error}</div>
+            }
+             {
+               status === 'succeeded' && searchResult?.length===0 && <div
+                className='no_books'
+                >No books available</div>
+
+            }
       {status === "succeeded" &&
         searchResult?.map((book) => <Book key={book._id} 
         id={book._id}
-        image={`http://localhost:3000/images/${book.image}`}
+        image={book.image}
         title={book.title}
         author={book.author}
         price={book.price}

@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 const token = JSON.parse(localStorage.getItem("userToken")) || null;
-const baseUrl = "https://90wb7h7uk0.execute-api.us-east-1.amazonaws.com/dev/";
+const baseUrl = "https://90wb7h7uk0.execute-api.us-east-1.amazonaws.com/dev";
 const initialState = {
   books: [],
   status: "idle",
@@ -18,6 +18,7 @@ export const fetchBooks = createAsyncThunk("books/fetchBooks", async () => {
 export const addNewBook = createAsyncThunk("books/addNewBook", async (book) => {
   console.log(book);
   console.log(token);
+  try{
   const response = await fetch(`${baseUrl}/books/create`, {
     method: "POST",
     headers: {
@@ -28,6 +29,9 @@ export const addNewBook = createAsyncThunk("books/addNewBook", async (book) => {
   const data = await response.json();
   console.log(data);
   return data.data;
+}catch(err){
+  console.log(err);
+}
 });
 
 const bookSlice = createSlice({

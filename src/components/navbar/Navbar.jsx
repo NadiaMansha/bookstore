@@ -10,7 +10,7 @@ import { cartSelector } from '../../features/cart/cartSlice'
 import { Link } from 'react-router-dom'
 import { selectAuthUserToken } from '../../features/auth/authSlice'
 import {AiOutlineLogout} from 'react-icons/ai'
-import { Button, Modal } from 'antd';
+import { Modal } from 'antd';
 import { useSearchParams } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 import { GiHamburgerMenu } from "react-icons/gi";
@@ -131,24 +131,57 @@ const Navbar = () => {
                   className="navbar__hamburger__icon_close"
                   onClick={()=>setShowLinks(false)} />
                  <ul className="nav-links">
-          <li>
+          <li onClick={ ()=>setShowLinks(false)  }>
             <Link to="/">Home</Link>
           </li>
        
-          <li>
+          <li onClick={ ()=>setShowLinks(false)} >
             <Link to="about">About Us</Link>
           </li>
            
-          <li>
+          <li onClick={ ()=>setShowLinks(false)}>
             <a href="#new-release">New Release</a>
           </li>
-          <li>
+          <li onClick={ ()=>setShowLinks(false)}>
           <Link  to="books">Books</Link>
           </li>
-          <li>
+          <li onClick={ ()=>setShowLinks(false)}>
           <Link to="contact">Contact</Link>
           </li>
-         
+         <li onClick={ ()=>setShowLinks(false)}>
+          <Link to="cart">
+            Cart
+          </Link>
+         </li>
+         {
+              token?
+          <li
+          style={
+            {
+              color:'white',
+            }
+          }
+          onClick={() => {
+            setIsModalVisible(true); }
+          }
+           >
+               
+                Logout
+                </li>:
+                <li onClick={ ()=>setShowLinks(false)}>
+                <Link to="/login">
+              
+                Login</Link>
+                </li>
+            }
+            
+              {
+                token?              <li onClick={ ()=>setShowLinks(false)}> 
+                  <Link to="dashboard">
+             
+                Account</Link>
+                  </li>:""  
+              }
          
         </ul>
             </div>
@@ -190,7 +223,8 @@ const Navbar = () => {
       setIsModalVisible(false)
       localStorage.removeItem('userToken')
       localStorage.removeItem('userInfo')
-      window.location('/')
+      window.location.reload()
+      window.location.href = '/'
     }}
     onCancel={() => {
       setIsModalVisible(false)

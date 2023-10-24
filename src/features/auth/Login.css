@@ -95,7 +95,6 @@
 @media screen and (max-width: 480px) {
   .login {
     width: 300px;
-   
     margin-left: 50px;
   }
   .login h1 {
@@ -112,7 +111,6 @@
 @media screen and (max-width: 320px) {
   .login {
     width: 250px;
-
     margin-left: 20px;
   }
   .login h1 {

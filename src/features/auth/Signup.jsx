@@ -16,16 +16,12 @@ export const Signup = () => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     dispatch(registerUser(formData))
-    if (success) {
+   
       setFormData({  username:'',email: '', password: '' })
       alert('Signup successful')
       navigate('/')
 
-    }
-    if (error) {
-      alert( error.toString())
-
-    }
+   
   }
   return (
     <div className="login">

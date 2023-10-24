@@ -14,18 +14,13 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-
     dispatch(loginUser(formData))
-    if (success) {
+   
       setFormData({ email: '', password: '' })
       alert('Login successful')
       navigate('/')
 
-    }
-    if (error) {
-      alert( error.toString())
-
-    }
+    
   }
   return (
     <div className="login">
@@ -42,7 +37,7 @@ value={formData.password}
 onChange={e => setFormData({ ...formData, password: e.target.value })}
 name='password' />
 <button onClick={handleSubmit}>
-Login
+{loading ? 'Loading...' : 'Login'}
 </button>
 
 
